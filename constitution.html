@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <script>
+  if(localStorage.getItem("szt_is_login")!=="1") {
+    window.location.href = "login.html";
+  }
+</script>
+  <meta charset="UTF-8">
+  <title>宪法学习 - 三学通思政网站</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .tab-btns { margin-bottom: 10px;}
+    .tablink { padding:7px 17px; border:none; border-radius:7px 7px 0 0; background:#e9e9e9; color:#222; font-size:1em; cursor:pointer; margin-right:5px;}
+    .tablink.active { background:#176ae6; color:#fff;}
+    .tabcontent { border-top:2px solid #176ae6; background:#fff; padding:15px 15px 20px 15px;}
+    .option-correct { background: #d7ffd7 !important; }
+    .option-wrong { background: #ffd3d3 !important; }
+    .answer-hint { color: #e53935; font-weight: bold; margin-left:15px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>宪法学习</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="constitution.html">宪法学习</a>
+      <a href="nationalsecurity.html">国家安全教育</a>
+      <a href="party.html">党史学习</a>
+      <a href="profile.html">个人中心</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="tab-btns">
+        <button class="tablink active" onclick="showTab('knowledge')">知识点</button>
+        <button class="tablink" onclick="showTab('quiz')">题库</button>
+      </div>
+
+      <div id="knowledge" class="tabcontent">
+        <h2>宪法知识点</h2>
+        <ol>
+          <li>宪法是国家的根本大法，具有最高法律效力。</li>
+          <li>宪法规定国家的根本制度和根本任务。</li>
+          <li>中华人民共和国现行宪法通过于1982年。</li>
+          <li>宪法的修改须经全国人大常委会提议，由全国人大三分之二以上代表通过。</li>
+          <li>宪法规定了公民的基本权利和义务。</li>
+          <li>一切法律、行政法规和地方性法规不得与宪法相抵触。</li>
+          <li>宪法明确规定中国共产党领导地位。</li>
+          <li>宪法规定国家实行社会主义法治，依法治国。</li>
+          <li>宪法序言明确中国的根本任务是建设社会主义现代化国家。</li>
+          <li>宪法明确国家保护公民的合法的私有财产。</li>
+          <li>宪法规定国家尊重和保障人权。</li>
+          <li>宪法设有全国人民代表大会制度作为根本政治制度。</li>
+          <li>宪法规定我国实行民族区域自治制度。</li>
+          <li>宪法规定全国人民代表大会是国家最高权力机关。</li>
+          <li>宪法规定中国公民享有言论、出版、集会、结社、游行、示威的自由。</li>
+        </ol>
+      </div>
+
+      <div id="quiz" class="tabcontent" style="display:none;">
+        <h2>宪法知识自测题</h2>
+        <form id="quiz-form">
+          <ol>
+            <li id="q1">
+              宪法的法律效力如何？<br>
+              <label><input type="radio" name="q1" value="A">A. 与普通法律同等</label>
+              <label><input type="radio" name="q1" value="B" data-answer="true">B. 最高</label>
+              <label><input type="radio" name="q1" value="C">C. 次于行政法规</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q2">
+              我国现行宪法是哪一年正式通过的？<br>
+              <label><input type="radio" name="q2" value="A">A. 1949年</label>
+              <label><input type="radio" name="q2" value="B" data-answer="true">B. 1982年</label>
+              <label><input type="radio" name="q2" value="C">C. 1978年</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q3">
+              宪法规定修改宪法须由多少全国人大代表通过？<br>
+              <label><input type="radio" name="q3" value="A">A. 超过半数</label>
+              <label><input type="radio" name="q3" value="B">B. 三分之一</label>
+              <label><input type="radio" name="q3" value="C" data-answer="true">C. 三分之二以上</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q4">
+              公民享有的自由不包括下列哪项？<br>
+              <label><input type="radio" name="q4" value="A">A. 言论</label>
+              <label><input type="radio" name="q4" value="B">B. 出版</label>
+              <label><input type="radio" name="q4" value="C" data-answer="true">C. 危害国家安全</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q5">
+              一切法律不得与什么相抵触？<br>
+              <label><input type="radio" name="q5" value="A" data-answer="true">A. 宪法</label>
+              <label><input type="radio" name="q5" value="B">B. 行政法规</label>
+              <label><input type="radio" name="q5" value="C">C. 地方性法规</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q6">
+              宪法规定国家保护什么财产？<br>
+              <label><input type="radio" name="q6" value="A">A. 违法所得</label>
+              <label><input type="radio" name="q6" value="B" data-answer="true">B. 合法私有财产</label>
+              <label><input type="radio" name="q6" value="C">C. 集体财产</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q7">
+              全国人民代表大会的地位是？<br>
+              <label><input type="radio" name="q7" value="A">A. 行政机关</label>
+              <label><input type="radio" name="q7" value="B">B. 司法机关</label>
+              <label><input type="radio" name="q7" value="C" data-answer="true">C. 最高权力机关</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q8">
+              宪法序言强调的根本任务是？<br>
+              <label><input type="radio" name="q8" value="A">A. 进行改革开放</label>
+              <label><input type="radio" name="q8" value="B" data-answer="true">B. 建设社会主义现代化国家</label>
+              <label><input type="radio" name="q8" value="C">C. 实现共同富裕</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q9">
+              宪法明文规定了哪个党是领导核心？<br>
+              <label><input type="radio" name="q9" value="A" data-answer="true">A. 中国共产党</label>
+              <label><input type="radio" name="q9" value="B">B. 民主党派</label>
+              <label><input type="radio" name="q9" value="C">C. 工人党</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q10">
+              我国实行哪种政治体制？<br>
+              <label><input type="radio" name="q10" value="A">A. 君主立宪制</label>
+              <label><input type="radio" name="q10" value="B">B. 总统制</label>
+              <label><input type="radio" name="q10" value="C" data-answer="true">C. 人民代表大会制度</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+          </ol>
+          <button type="submit">提交答案</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script>
+    function showTab(tab) {
+      var tc = document.querySelectorAll('.tabcontent');
+      tc.forEach(function(div){div.style.display="none"});
+      document.getElementById(tab).style.display="block";
+      var tb = document.querySelectorAll('.tablink');
+      tb.forEach(function(btn){btn.classList.remove('active')});
+      event.target.classList.add('active');
+    }
+    document.getElementById('quiz-form').onsubmit = function(e){
+      e.preventDefault();
+      // 题目总数
+      for(let i=1;i<=10;i++) {
+        let li = document.getElementById("q"+i);
+        let radios = li.querySelectorAll('input[type="radio"]');
+        let labels = li.querySelectorAll('label');
+        // 清空之前的样式和提示
+        labels.forEach(lab=>{ lab.classList.remove("option-correct","option-wrong");});
+        let hint = li.querySelector('.answer-hint');
+        if(hint) {hint.style.display = "none"; hint.textContent="";}
+        let answerRadio = li.querySelector('input[data-answer="true"]');
+        let userRadio = li.querySelector('input[type="radio"]:checked');
+        if(!userRadio) continue;
+        let answerLabel = answerRadio ? answerRadio.parentElement : null;
+        let userLabel = userRadio.parentElement;
+        if(userRadio.value === answerRadio.value) {
+          userLabel.classList.add("option-correct");
+        } else {
+          userLabel.classList.add("option-wrong");
+          if(answerLabel) answerLabel.classList.add("option-correct");
+          if(hint) {
+            let answerTxt = answerLabel.innerText.trim();
+            hint.textContent = "正确答案：" + answerTxt;
+            hint.style.display = "inline";
+          }
+        }
+      }
+      alert("做对的选项显示绿色，做错你的答案为红色并显示正确答案！");
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <script>
+  if(localStorage.getItem("szt_is_login")!=="1") {
+    window.location.href = "login.html";
+  }
+</script>
+  <meta charset="UTF-8">
+  <title>三学通思政网站</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>三学通思政网站</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="constitution.html">宪法学习</a>
+      <a href="nationalsecurity.html">国家安全教育</a>
+      <a href="party.html">党史学习</a>
+      <a href="profile.html">个人中心</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>网站简介</h2>
+      <p>本网站专为高校学生打造，分设宪法学习、国家安全教育、党史学习三大板块，助你系统掌握重点思政知识。</p>
+    </section>
+    <section>
+      <h2>三大学习板块</h2>
+      <ul>
+        <li><a href="constitution.html">宪法学习</a></li>
+        <li><a href="nationalsecurity.html">国家安全教育</a></li>
+        <li><a href="party.html">党史学习</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <script>
+  if(localStorage.getItem("szt_is_login")!=="1") {
+    window.location.href = "login.html";
+  }
+</script>
+  <meta charset="UTF-8">
+  <title>党史学习 - 三学通思政网站</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .tab-btns { margin-bottom: 10px;}
+    .tablink { padding:7px 17px; border:none; border-radius:7px 7px 0 0; background:#e9e9e9; color:#222; font-size:1em; cursor:pointer; margin-right:5px;}
+    .tablink.active { background:#176ae6; color:#fff;}
+    .tabcontent { border-top:2px solid #176ae6; background:#fff; padding:15px 15px 20px 15px;}
+    .option-correct { background: #d7ffd7 !important; }
+    .option-wrong { background: #ffd3d3 !important; }
+    .answer-hint { color: #e53935; font-weight: bold; margin-left:15px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>党史学习</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="constitution.html">宪法学习</a>
+      <a href="nationalsecurity.html">国家安全教育</a>
+      <a href="party.html">党史学习</a>
+      <a href="profile.html">个人中心</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="tab-btns">
+        <button class="tablink active" onclick="showTab('knowledge')">知识点</button>
+        <button class="tablink" onclick="showTab('quiz')">题库</button>
+      </div>
+      <div id="knowledge" class="tabcontent">
+        <h2>党史知识点</h2>
+        <ol>
+          <li>中国共产党成立于1921年7月。</li>
+          <li>1949年10月1日中华人民共和国宣布成立。</li>
+          <li>1978年党的十一届三中全会开启了改革开放历史新时期。</li>
+          <li>党带领人民取得抗日战争和解放战争的胜利，实现民族独立和人民解放。</li>
+          <li>毛泽东思想是中国化马克思主义的第一次历史性飞跃。</li>
+          <li>党的十九大确立习近平新时代中国特色社会主义思想为党的指导思想。</li>
+          <li>中共一大至十九大的党代会不断推进党和国家建设进步。</li>
+          <li>长征精神、延安精神等红色精神是中国革命宝贵财富。</li>
+          <li>中国共产党始终坚持全心全意为人民服务的宗旨。</li>
+          <li>新时代中国特色社会主义的总任务是实现中华民族伟大复兴。</li>
+          <li>新民主主义革命时期的三大法宝：统一战线、武装斗争、党的建设。</li>
+          <li>“两弹一星”精神、抗疫精神体现了中国精神的时代内涵。</li>
+          <li>历史上三大作风：理论联系实际，密切联系群众，自我批评。</li>
+          <li>党史学习有助于坚定理想信念、增强历史自觉。</li>
+          <li>中国共产党坚持“四个自信”，即道路自信、理论自信、制度自信、文化自信。</li>
+        </ol>
+      </div>
+      <div id="quiz" class="tabcontent" style="display:none;">
+        <h2>党史自测题</h2>
+        <form id="quiz-form-party">
+          <ol>
+            <li id="q1">
+              中国共产党成立时间是？<br>
+              <label><input type="radio" name="q1" value="A" data-answer="true">A. 1921年</label>
+              <label><input type="radio" name="q1" value="B">B. 1949年</label>
+              <label><input type="radio" name="q1" value="C">C. 1935年</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q2">
+              新中国成立的时间是？<br>
+              <label><input type="radio" name="q2" value="A">A. 1927年</label>
+              <label><input type="radio" name="q2" value="B" data-answer="true">B. 1949年</label>
+              <label><input type="radio" name="q2" value="C">C. 1978年</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q3">
+              十一届三中全会主要标志着？<br>
+              <label><input type="radio" name="q3" value="A">A. 新中国成立</label>
+              <label><input type="radio" name="q3" value="B">B. 建设社会主义</label>
+              <label><input type="radio" name="q3" value="C" data-answer="true">C. 改革开放新时期开始</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q4">
+              中国共产党首要的根本宗旨是？<br>
+              <label><input type="radio" name="q4" value="A">A. 实行改革开放</label>
+              <label><input type="radio" name="q4" value="B" data-answer="true">B. 全心全意为人民服务</label>
+              <label><input type="radio" name="q4" value="C">C. 实现工业化</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q5">
+              “两弹一星”精神体现了？<br>
+              <label><input type="radio" name="q5" value="A" data-answer="true">A. 爱国奉献、拼搏创新</label>
+              <label><input type="radio" name="q5" value="B">B. 讲究效率</label>
+              <label><input type="radio" name="q5" value="C">C. 重在理论联系实际</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q6">
+              党的十九大确立的指导思想是？<br>
+              <label><input type="radio" name="q6" value="A">A. 毛泽东思想</label>
+              <label><input type="radio" name="q6" value="B" data-answer="true">B. 习近平新时代中国特色社会主义思想</label>
+              <label><input type="radio" name="q6" value="C">C. 三个代表重要思想</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q7">
+              下列哪项不是三大作风之一？<br>
+              <label><input type="radio" name="q7" value="A">A. 自我批评</label>
+              <label><input type="radio" name="q7" value="B">B. 理论联系实际</label>
+              <label><input type="radio" name="q7" value="C" data-answer="true">C. 以经济建设为中心</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q8">
+              新民主主义革命三大法宝不包括？<br>
+              <label><input type="radio" name="q8" value="A">A. 党的建设</label>
+              <label><input type="radio" name="q8" value="B">B. 统一战线</label>
+              <label><input type="radio" name="q8" value="C" data-answer="true">C. 外交合作</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q9">
+              党史学习的根本目的之一是？<br>
+              <label><input type="radio" name="q9" value="A" data-answer="true">A. 坚定理想信念</label>
+              <label><input type="radio" name="q9" value="B">B. 增加经济收入</label>
+              <label><input type="radio" name="q9" value="C">C. 提高体育成绩</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+            <li id="q10">
+              “四个自信”不包括？<br>
+              <label><input type="radio" name="q10" value="A" data-answer="true">A. 科技自信</label>
+              <label><input type="radio" name="q10" value="B">B. 道路自信</label>
+              <label><input type="radio" name="q10" value="C">C. 理论自信</label>
+              <span class="answer-hint" style="display:none;"></span>
+            </li>
+          </ol>
+          <button type="submit">提交答案</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script>
+    function showTab(tab) {
+      var tc = document.querySelectorAll('.tabcontent');
+      tc.forEach(function(div){div.style.display="none"});
+      document.getElementById(tab).style.display="block";
+      var tb = document.querySelectorAll('.tablink');
+      tb.forEach(function(btn){btn.classList.remove('active')});
+      event.target.classList.add('active');
+    }
+    document.getElementById('quiz-form-party').onsubmit = function(e){
+      e.preventDefault();
+      for(let i=1;i<=10;i++) {
+        let li = document.getElementById("q"+i);
+        let radios = li.querySelectorAll('input[type="radio"]');
+        let labels = li.querySelectorAll('label');
+        labels.forEach(lab=>{ lab.classList.remove("option-correct","option-wrong");});
+        let hint = li.querySelector('.answer-hint');
+        if(hint) {hint.style.display = "none"; hint.textContent="";}
+        let answerRadio = li.querySelector('input[data-answer="true"]');
+        let userRadio = li.querySelector('input[type="radio"]:checked');
+        if(!userRadio) continue;
+        let answerLabel = answerRadio ? answerRadio.parentElement : null;
+        let userLabel = userRadio.parentElement;
+        if(userRadio.value === answerRadio.value) {
+          userLabel.classList.add("option-correct");
+        } else {
+          userLabel.classList.add("option-wrong");
+          if(answerLabel) answerLabel.classList.add("option-correct");
+          if(hint) {
+            let answerTxt = answerLabel.innerText.trim();
+            hint.textContent = "正确答案：" + answerTxt;
+            hint.style.display = "inline";
+          }
+        }
+      }
+      alert("做对的选项显示绿色，做错你的答案为红色并显示正确答案！");
+    };
+  </script>
+</body>
+</html>

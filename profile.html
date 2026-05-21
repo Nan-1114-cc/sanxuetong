@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <script>
+  if(localStorage.getItem("szt_is_login")!=="1") {
+    window.location.href = "login.html";
+  }
+</script>
+  <meta charset="UTF-8">
+  <title>个人中心 - 三学通思政网站</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>个人中心</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="constitution.html">宪法学习</a>
+      <a href="nationalsecurity.html">国家安全教育</a>
+      <a href="party.html">党史学习</a>
+      <a href="profile.html">个人中心</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>用户信息</h2>
+      <p>用户名：面</p>
+      <p>累计积分：120</p>
+    </section>
+    <section>
+      <h2>学习记录</h2>
+      <ul>
+        <li>宪法学习已完成</li>
+        <li>国家安全教育进行中</li>
+        <li>党史学习未开始</li>
+      </ul>
+    </section>
+    <section>
+      <h2>错题本</h2>
+      <ul>
+        <li>
+          <strong>[宪法学习]</strong> 宪法的法律效力如何？
+          <a href="constitution.html#q1">再次作答</a>
+        </li>
+        <li>
+          <strong>[国家安全教育]</strong> 网络安全属于国家安全的？
+          <a href="nationalsecurity.html#q8">再次作答</a>
+        </li>
+        <li>
+          <strong>[党史学习]</strong> “四个自信”不包括？
+          <a href="party.html#q10">再次作答</a>
+        </li>
+      </ul>
+    </section>
+    <button onclick="logout()">退出登录</button>
+<script>
+function logout(){
+  localStorage.removeItem("szt_is_login");
+  window.location.href="login.html";
+}
+</script>
+  </main>
+</body>
+</html>
