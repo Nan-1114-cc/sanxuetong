@@ -45,14 +45,14 @@
           <li>中华人民共和国现行宪法通过于1982年。</li>
           <li>宪法规定了公民的基本权利和义务。</li>
           <li>一切法律、行政法规和地方性法规不得与宪法相抵触。</li>
-          <li>宪法明确规定中国共产党领导地位。</li>
+          <li>宪法明确规定中国共产党的领导地位。</li>
           <li>宪法规定国家实行社会主义法治，依法治国。</li>
-          <li>宪法序言明确中国的根本任务是沿着中国特色社会主义道路，集中力量进行社会主义现代化建设。</li>
+          <li>宪法序言明确中国的根本任务是沿着中国特色社会道路，集中力量进行社会主义现代化建设。</li>
           <li>宪法明确国家保护公民的合法的私有财产。</li>
           <li>宪法规定国家尊重和保障人权。</li>
           <li>宪法规定人民代表大会制度是我国的根本政治制度。</li>
           <li>宪法规定我国实行民族区域自治制度。</li>
-          <li>宪法规定全国人民代表大会是国家最高权力机关。</li>
+          <li>宪法规定全国人民代表大会是最高国家权力机关。</li>
           <li>宪法规定中国公民享有言论、出版、集会、结社、游行、示威的自由。</li>
         </ol>
       </div>
@@ -75,49 +75,49 @@
               <label><input type="radio" name="q2" value="C">C. 1978年</label>
               <span class="answer-hint" style="display:none;"></span>
             </li>
-            <li id="q4">
+            <li id="q3">
               公民享有的自由不包括下列哪项？<br>
               <label><input type="radio" name="q4" value="A">A. 言论</label>
               <label><input type="radio" name="q4" value="B">B. 出版</label>
               <label><input type="radio" name="q4" value="C" data-answer="true">C. 危害国家安全</label>
               <span class="answer-hint" style="display:none;"></span>
             </li>
-            <li id="q5">
+            <li id="q4">
               一切法律不得与什么相抵触？<br>
               <label><input type="radio" name="q5" value="A" data-answer="true">A. 宪法</label>
               <label><input type="radio" name="q5" value="B">B. 行政法规</label>
               <label><input type="radio" name="q5" value="C">C. 地方性法规</label>
               <span class="answer-hint" style="display:none;"></span>
             </li>
-            <li id="q6">
+            <li id="q5">
               宪法规定国家保护什么财产？<br>
               <label><input type="radio" name="q6" value="A">A. 违法所得</label>
               <label><input type="radio" name="q6" value="B" data-answer="true">B. 合法私有财产</label>
               <label><input type="radio" name="q6" value="C">C. 集体财产</label>
               <span class="answer-hint" style="display:none;"></span>
             </li>
-            <li id="q7">
+            <li id="q6">
               全国人民代表大会的地位是？<br>
               <label><input type="radio" name="q7" value="A">A. 行政机关</label>
               <label><input type="radio" name="q7" value="B">B. 司法机关</label>
-              <label><input type="radio" name="q7" value="C" data-answer="true">C. 最高权力机关</label>
+              <label><input type="radio" name="q7" value="C" data-answer="true">C. 最高国家权力机关</label>
               <span class="answer-hint" style="display:none;"></span>
             </li>
-            <li id="q8">
+            <li id="q7">
               宪法序言强调的根本任务是？<br>
               <label><input type="radio" name="q8" value="A">A. 进行改革开放</label>
               <label><input type="radio" name="q8" value="B" data-answer="true">B. 沿着中国特色社会主义道路，集中力量进行社会主义现代化建设</label>
               <label><input type="radio" name="q8" value="C">C. 实现共同富裕</label>
               <span class="answer-hint" style="display:none;"></span>
             </li>
-            <li id="q9">
+            <li id="q8">
               宪法明文规定了哪个党是领导核心？<br>
               <label><input type="radio" name="q9" value="A" data-answer="true">A. 中国共产党</label>
               <label><input type="radio" name="q9" value="B">B. 民主党派</label>
               <label><input type="radio" name="q9" value="C">C. 工人党</label>
               <span class="answer-hint" style="display:none;"></span>
             </li>
-            <li id="q10">
+            <li id="q9">
               我国的根本政治制度是什么？<br>
               <label><input type="radio" name="q10" value="A">A. 民族区域自治制度</label>
               <label><input type="radio" name="q10" value="B">B. 基层群众自治制度</label>
@@ -142,7 +142,7 @@
     document.getElementById('quiz-form').onsubmit = function(e){
       e.preventDefault();
       // 题目总数
-      for(let i=1;i<=10;i++) {
+      for(let i=1;i<=9;i++) {
         let li = document.getElementById("q"+i);
         let radios = li.querySelectorAll('input[type="radio"]');
         let labels = li.querySelectorAll('label');
